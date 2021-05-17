@@ -49,8 +49,11 @@ public class baiTapBuoi5 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nNhập vào chuỗi cần đếm số từ: ");
         chuoi = scanner.nextLine();
-        for (int i = 0; i < chuoi.length(); i++) {
-            char kyTu = chuoi.charAt(i);
+        String chuoich ;
+        chuoich = chuoi.trim();
+        chuoich = chuoich.replaceAll("\\s+"," ");
+        for (int i = 0; i < chuoich.length(); i++) {
+            char kyTu = chuoich.charAt(i);
             if (Character.isSpaceChar(kyTu)) {
                 dem++;
             }
@@ -126,7 +129,11 @@ public class baiTapBuoi5 {
     public static void chuanhoacau(){
         Scanner sc = new Scanner(System.in);
         System.out.print("\nNhập câu cần chuẩn hóa: ");
-        String chuoi= sc.nextLine();
+        String chuoibd= sc.nextLine();
+        String chuoich ;
+        chuoich = chuoibd.trim();
+        chuoich = chuoich.replaceAll("\\s+"," ");
+        System.out.print("Câu đã chuẩn hóa: "+chuoich);
 
     }
 }
