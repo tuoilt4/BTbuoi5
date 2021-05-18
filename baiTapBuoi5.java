@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 public class baiTapBuoi5 {
@@ -110,12 +111,15 @@ public class baiTapBuoi5 {
         Scanner sc = new Scanner(System.in);
         System.out.print("\nNhập số cần phân tích: ");
         int n = sc.nextInt();
+        if (baiTapBuoi4.checkSnt(n))
+        {System.out.print(n+" là số nguyên tô nên " +n +" = "+n);}
+            else { System.out.print(n+ " = ")  ;
         for (int i=2 ;i<=n;i++) {
             while (n % i == 0) {
                 n /= i;
                 System.out.print(i + "x");
             }
-        }
+        } }
     }
     public static void giaiphuongtrinh() {
         Scanner sc = new Scanner(System.in);
@@ -133,7 +137,42 @@ public class baiTapBuoi5 {
         String chuoich ;
         chuoich = chuoibd.trim();
         chuoich = chuoich.replaceAll("\\s+"," ");
+        chuoich = chuoich.toLowerCase();
+//        for (int i = 0; i<=chuoich.length();i++)
+//        {
+//            if (Character.isSpaceChar(chuoich.charAt(i)))
+//            { String kytu = String.valueOf(chuoich.charAt(i+1));
+//                chuoich = chuoich.toUpperCase(kytu);}
+//        }
         System.out.print("Câu đã chuẩn hóa: "+chuoich);
 
     }
+    public static void tinhtong() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nNhập số nguyên n: ");
+        int n = sc.nextInt();
+        int tong = 0;
+
+        for (int i = 0; i <= n; i++) {
+            if (i % 3 == 0) {
+                tong = tong + i;
+            }
+        }
+        System.out.print("Tổng các số chia hết cho 3 từ 0 đên " + n + " = " + tong);
+
+    }
+        public static void kiemtraso(){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Nhập số nguyên : ");
+            int n = sc.nextInt();
+            if(n<0) {
+                System.out.print("Số bạn vưa nhập "+n+ " là số nguyên âm");
+            }
+            else if (n==0) {
+                System.out.print("Số bạn vưa nhập "+n+ " không là số nguyên âm và cũng không phải số nguyên dương");
+            }
+            else {System.out.print("Số bạn vưa nhập "+n +" là số nguyên dương");}
+
+        }
+
 }
