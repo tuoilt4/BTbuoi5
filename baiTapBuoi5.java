@@ -29,7 +29,7 @@ public class baiTapBuoi5 {
 
     public static void timchuoi (String chuoi) {
         Scanner sc = new Scanner(System.in);
-        System.out.print ("\nNhập ký tự cần tìm trong chuỗi:");
+        System.out.print ("\nNhập ký tự cần tìm trong chuỗi: ");
         //sc.nextLine();
         String kyTu = sc.nextLine();
         System.out.print("\nVị trí xuất hiện của ký tự " + kyTu + " trong chuỗi " + chuoi + ":");
@@ -37,9 +37,6 @@ public class baiTapBuoi5 {
             String c = String.valueOf(chuoi.charAt(i));
             if (c.equals(kyTu)){
                 System.out.print(i +"\t");
-            }
-            else {
-                System.out.print("\n Không có ký tự cần tìm trong chuỗi");
             }
         }
     }
